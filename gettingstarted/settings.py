@@ -56,7 +56,7 @@ if IS_HEROKU_APP:
     # validation of the Host header in the incoming HTTP request. On other platforms you may need to
     # list the expected hostnames explicitly in production to prevent HTTP Host header attacks. See:
     # https://docs.djangoproject.com/en/6.0/ref/settings/#std-setting-ALLOWED_HOSTS
-    ALLOWED_HOSTS = ["*"]
+    ALLOWED_HOSTS = ['localhost','127.0.0.1','lab1-python-6eo4.onrender.com']
 
     # Redirect all non-HTTPS requests to HTTPS. This requires that:
     # 1. Your app has a TLS/SSL certificate, which all `*.herokuapp.com` domains do by default.
@@ -211,6 +211,7 @@ WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 # `DEBUG=True` (which otherwise makes diagnosing errors much harder in production):
 # https://docs.djangoproject.com/en/6.0/ref/logging/#default-logging-configuration
 # For more advanced logging you may want to try: https://django-structlog.readthedocs.io
+DEBUG=True
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
